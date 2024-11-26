@@ -1,0 +1,14 @@
+Question: Alternatively, to compare items in the cart, instead of using Comparator, we can use the Comparable interface and override the compareTo() method. You can refer to the Java docs to see the information of this interface.
+Suppose we are taking this Comparable interface approach.
+- What class should implement the Comparable interface?    
+ Answer:   Lớp phương tiện nên triển khai giao diện Comparable.
+
+- In those classes, how should you implement the compareTo()method be to reflect the ordering that we want?  
+ Answer:  Câu trả lời có thể tìm thấy trong tệp 'Media.java'.
+
+- Can we have two ordering rules of the item (by title then cost and by cost then title) if we use this Comparable interface approach?  
+ Answer:  Không, chúng ta không thể. Giao diện Comparable giả định rằng chỉ có một thứ tự tự nhiên cho các đối tượng đang được so sánh.
+
+- Suppose the DVDs has a different ordering rule from the other media types, that is by title, then decreasing length, then cost. How would you modify your code to allow this?  
+ Answer:  Chúng ta có thể ghi đè phương thức compareTo trong lớp Disc để phản ánh quy tắc sắp xếp mới.
+	Mã đã sửa đổi có thể được tìm thấy trong tệp `Disc.java`
