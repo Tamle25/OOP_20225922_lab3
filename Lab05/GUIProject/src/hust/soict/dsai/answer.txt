@@ -1,0 +1,16 @@
+Question.1
+Nếu đối tượng truyền không phải là một thể hiện của Media => Runtime error
+
+Question.2
+Nên triển khai giao diện Comparable trong lớp Media
+
+Question.3
+Triển khai phương thức compareTo() để phản ánh thứ tự mà chúng ta muốn
+public int compareTo(Media media) {
+return Comparator.comparing(Media::getCost).thenComparing(Media::getTitle).compare(this, media);
+}
+Triển khai phương thức compareTo() để phản ánh thứ tự mà chúng ta muốn trong DigitalVideoDisc
+public int compareTo(Media media) {
+DigitalVideoDisc dvd =(DigitalVideoDisc) media;
+return Comparator.comparing(DigitalVideoDisc::getTitle).thenComparing(DigitalVideoDisc::getLength).thenComparing(DigitalVideoDisc::getCost).compare(this, dvd);
+}
